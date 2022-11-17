@@ -69,3 +69,35 @@ Untuk memberitahu framework bahwa ada nilai yang berubah. Pada implementasi coun
                   style: Theme.of(context).textTheme.headline4,
                 ),
     ```
+
+# Tugas 8
+### Jelaskan perbedaan Navigator.push dan Navigator.pushReplacement.
+Navigator pada flutter bekerja seperti struktur data stack, jadi untuk melakukan perpindahan logic kita dapat melakukan push navigator ke bagian stack paling atas, pushReplacemant bekerja sama seperti push namun pushReplacement mengganti stack paling atas tidak seperti push yang hanya menimpa.
+
+### Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+Pada tugas 8 ini saya menggunakan widget widget yang sebelumnya saya telah gunakan pada tugas 7, namun saya juga menambahkan beberapa widget baru yang tidak ada di tugas 7 yaitu:
+1. `Drawer` : Widget untuk melakukan navigasi
+2. `Form` : Widget untuk implementasi Form
+3. `ListTile` : Widget untuk menampung teks leading dan trailing
+4. `Center` : Widget untuk menengahkan tampilan
+5. `Datepicker` : Widget untuk memilih tanggal
+6. `TeksStyle` : Widget untuk memberikan style pada teks
+7. `DropDownBottonFormField` : Widget untuk membuat dropdown
+8. `Card` : Widget untuk mengumpulkan data pada card
+9. `TextInput` : Widget untuk input teks
+10. `TextButton` : Widget untuk menampilkan button dengan teks
+
+### Sebutkan jenis-jenis event yang ada pada Flutter (contoh: onPressed).
+1. onPressed
+2. onSaved
+3. onTap
+4. onChange
+
+### Jelaskan bagaimana cara kerja Navigator dalam "mengganti" halaman dari aplikasi Flutter.
+Navigator bekerja seperti struktur data stack. kaetika kita ingin mengganti halaman dari aplikasi flutter, yang kita lakukan adalah menimpa halaman tersebut atau menaruh halaman tersebut pada bagian atas stack (push), ketika ingin kembali ke halaman sebelumnya maka kita bisa menghilangkan halaman yang kita timpa sebelumnya (pop).
+
+### Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+1. menambahkan drawer pada app yang telah dibuat sebelumnya
+2. buat class yang menyimpan tipe data pada setiap input pada form
+3. buat halaman form sesuai yang meminta judul, nominal, jenis, dan tanggal
+4. buat halaman data yang menampilkan semua data yang telah di input pada Form, lalu tampilkan dengan card
