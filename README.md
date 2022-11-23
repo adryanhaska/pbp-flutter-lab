@@ -101,3 +101,45 @@ Navigator bekerja seperti struktur data stack. kaetika kita ingin mengganti hala
 2. buat class yang menyimpan tipe data pada setiap input pada form
 3. buat halaman form sesuai yang meminta judul, nominal, jenis, dan tanggal
 4. buat halaman data yang menampilkan semua data yang telah di input pada Form, lalu tampilkan dengan card
+
+
+# Tugas 9
+### Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+Bisa, kita bisa melakukan pengambilan data JSON tanpa membuat model terlebih dahulu. Tetapi akan membuat prosesnya pengaksesannya menjadi lebih sulit. Sehingga lebih baik menggunakan model sebagai peratara sebelum melakukan pengambilan data JSON.
+
+### Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+Pada tugas 9 ini saya menggunakan widget widget yang sebelumnya saya telah gunakan pada tugas 7 dan tugas 8, namun saya juga menambahkan beberapa widget baru yang tidak ada di tugas 7 dan tugas 8 yaitu:
+1. `SizedBox` : Widget untuk membuat simple box dengan size tertentu
+2. `Align` : Widget untuk Align child widget
+3. `RichText` : Widget untuk menampilkan teks dengan style yang berbeda
+4. `FutureBuilder` : Widget untuk menampilakn data yang diambil
+5. `Checkbox` : Widget untuk menampilkan checkbox
+6. `MaterialPageRoute` : Widget untuk route page
+7. `GestureDetector` : Widget untuk mendeteksi adanya gesture seperti onTap()
+8. `BoxDecoration` : Widget memberikan style bada box
+9. `BoxShadow` : Widget untuk memberikan style pada shadow box
+
+### Jelaskan mekanisme pengambilan data dari json hingga dapat ditampilkan pada Flutter.
+- buat model yang sesuai degan data json yang diambil
+- ambil data menggunakan http get
+- ubah data yang diambil ke dalam model yang sudah dibuat sebelumnya
+- tampilkan data tersebut dengan widdget FutureBuilder
+
+### Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+1. lakukan `flutter pub add http` pada project flutter untuk menambahkan package http
+2. pisahkan file selain `main.dart` pada folder model atau folder page
+3. buat model sesuai data json menggunakan bantuan [Quicktype](https://app.quicktype.io/)
+4. aktifkan koneksi internet pada file `android/app/src/main/AndroidManifest.xml` dengan menambahkan kode
+   ```
+       <application>
+       ...
+       </application>
+       <!-- Required to fetch data from the Internet. -->
+       <uses-permission android:name="android.permission.INTERNET" />
+   ```
+5. ambil data json menggunakan http get
+6. konfersi data ke model dengan melakukan fetch
+7. tampilkan seluruh data dengan `FutureBuilder` pada halaman baru berisi seluruh watchlist
+8. tambahkan beberapa widget untuk menampilkan halaman seperti pada contoh
+9. buat halaman berisi detail dari mywatchlist dan tambahkan widget agar tampilan sesuai dengan contoh pada soal.
+10. menambahkan routing ke halaman mywatchlist pada drawer
